@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMÉ | Creative Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo">LUMÉ<span>.</span></div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#ia">LUMÉ AI</a>
+        </nav>
+
+        <button class="contact-button">Contactar</button>
+    </header>
+
+
+    <!-- INICIO -->
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">CREATIVE PORTFOLIO</p>
+
+                <h1>
+                    Ideas que se
+                    <span>convierten</span>
+                    en historias.
+                </h1>
+
+                <p class="hero-description">
+                    Un espacio para descubrir proyectos creativos,
+                    conocer su proceso y explorar nuevas ideas.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="primary-button">
+                        Explorar proyectos
+                    </a>
+
+                    <a href="#ia" class="secondary-button">
+                        ✦ Conocer LUMÉ AI
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="floating-label">
+                    ✦ Featured project
+                </div>
+
+                <div class="artwork">
+                    <div class="circle"></div>
+                    <div class="small-circle"></div>
+
+                    <div class="art-text">
+                        CREATE<br>
+                        YOUR<br>
+                        STORY
+                    </div>
+                </div>
+
+                <div class="project-preview">
+                    <div>
+                        <small>Proyecto destacado</small>
+                        <h3>Visual Poetry</h3>
+                    </div>
+
+                    <span>↗</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="about section">
+
+            <div class="section-label">
+                01 / ABOUT
+            </div>
+
+            <div class="about-content">
+
+                <div>
+                    <h2>
+                        No solo muestro
+                        <span>resultados.</span>
+                    </h2>
+                </div>
+
+                <div class="about-text">
+
+                    <p>
+                        LUMÉ es un portafolio pensado para personas
+                        creativas que quieren mostrar mucho más que
+                        una colección de trabajos.
+                    </p>
+
+                    <p>
+                        Cada proyecto cuenta su propia historia:
+                        desde la inspiración inicial hasta el resultado
+                        final.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="projects section">
+
+            <div class="section-heading">
+
+                <div>
+                    <div class="section-label">
+                        02 / SELECTED WORK
+                    </div>
+
+                    <h2>
+                        Proyectos que
+                        <span>hablan.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Explora algunos proyectos y descubre
+                    cómo fueron construidos.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <article class="project-card">
+
+                    <div class="project-image project-one">
+                        <span>01</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <small>BRANDING · 2026</small>
+                            <h3>Maison Nova</h3>
+                        </div>
+
+                        <button onclick="showProject('Maison Nova')">
+                            ↗
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-image project-two">
+                        <span>02</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <small>PHOTOGRAPHY · 2026</small>
+                            <h3>Soft Memories</h3>
+                        </div>
+
+                        <button onclick="showProject('Soft Memories')">
+                            ↗
+                        </button>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-image project-three">
+                        <span>03</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <small>DIGITAL ART · 2026</small>
+                            <h3>After Light</h3>
+                        </div>
+
+                        <button onclick="showProject('After Light')">
+                            ↗
+                        </button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- IA -->
+        <section id="ia" class="ai-section">
+
+            <div class="ai-content">
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+                <p class="eyebrow">LUMÉ AI</p>
+
+                <h2>
+                    Tu trabajo.
+                    <span>Una nueva perspectiva.</span>
+                </h2>
+
+                <p>
+                    LUMÉ AI analiza la información de tus proyectos
+                    y genera recomendaciones para organizar,
+                    describir y presentar mejor tu portafolio.
+                </p>
+
+                <div class="ai-demo">
+
+                    <div class="ai-input">
+
+                        <input
+                            type="text"
+                            id="projectInput"
+                            placeholder="Escribe el nombre de tu proyecto..."
+                        >
+
+                        <button onclick="generateRecommendation()">
+                            Analizar proyecto
+                        </button>
+
+                    </div>
+
+                    <div id="aiResult" class="ai-result">
+                        <span>✦</span>
+                        <p>
+                            La recomendación de LUMÉ AI aparecerá aquí.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-logo">
+                LUMÉ<span>.</span>
+            </div>
+
+            <p>
+                Creative portfolio · Designed with intention.
+            </p>
+
+            <p>
+                © 2026 LUMÉ
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
