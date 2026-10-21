@@ -1,46 +1,16 @@
-// ===============================
-// LUMÉ AI
-// ===============================
+// ==========================================
+// GBH — FUNCIONES GENERALES
+// ==========================================
 
-function generateRecommendation() {
-    const input = document.getElementById("projectInput");
-    const result = document.getElementById("aiResult");
+// Este archivo contiene las funciones generales
+// de interacción de la página.
 
-    const projectName = input.value.trim();
+// ==========================================
+// INICIALIZACIÓN
+// ==========================================
 
-    if (projectName === "") {
-        result.innerHTML = `
-            <span>✦</span>
-            <p>
-                Escribe primero el nombre de tu proyecto para que
-                LUMÉ AI pueda analizarlo.
-            </p>
-        `;
-        return;
-    }
+document.addEventListener("DOMContentLoaded", () => {
 
-    result.innerHTML = `
-        <span>✦</span>
-        <p>
-            <strong>${projectName}</strong> podría destacarse mejor
-            mostrando su proceso creativo, inspiración y resultado final.
-            LUMÉ AI recomienda utilizar etiquetas visuales y una
-            descripción breve para presentar el proyecto.
-        </p>
-    `;
-}
+    console.log("GBH Portfolio iniciado correctamente.");
 
-
-// ===============================
-// PROJECT PREVIEW
-// ===============================
-
-function showProject(projectName) {
-
-    alert(
-        "LUMÉ · " + projectName +
-        "\\n\\nAquí se mostraría el proceso completo del proyecto: " +
-        "inspiración, desarrollo y resultado final."
-    );
-
-}
+});

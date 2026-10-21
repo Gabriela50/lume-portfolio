@@ -1,123 +1,215 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LUMÉ | Creative Portfolio</title>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Gabriela Benítez Herrera, estudiante de Ingeniería de Software. Conoce sus proyectos de desarrollo web, aplicaciones y experiencias digitales.">
+
+    <title>Gabriela Benítez Herrera | Software Engineering Portfolio</title>
+
+    <!-- Tailwind -->
+
+    <link rel="stylesheet" href="src/output.css">
 
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="css/projects.css">
+
 </head>
 
-<body>
+<body class="selection:bg-[#e8b9c8] selection:text-[#1d1b1b]">
 
-    <!-- NAVEGACIÓN -->
-    <header class="navbar">
-        <div class="logo">LUMÉ<span>.</span></div>
+<!-- =========================
+     NAVBAR
+========================== -->
+
+    <header
+        class="navbar transition-all duration-300"
+    >
+
+        <div class="logo">
+
+            GBH<span>.</span>
+
+        </div>
 
         <nav>
+
             <a href="#inicio">Inicio</a>
+
             <a href="#sobre-mi">Sobre mí</a>
+
             <a href="#proyectos">Proyectos</a>
-            <a href="#ia">LUMÉ AI</a>
+
+            <a href="#ia">GBH Project Studio</a>
+
         </nav>
 
-        <button class="contact-button">Contactar</button>
+        <a href="#contacto" class="contact-button hover:-translate-y-0.5 transition-transform duration-300">Contactar</a>
+
     </header>
 
 
-    <!-- INICIO -->
+
+<!-- =========================
+     MAIN
+========================== -->
+
     <main>
 
-        <section id="inicio" class="hero">
+<!-- =========================
+         HERO
+========================== -->
 
-            <div class="hero-content">
+        <section id="inicio" class="hero gbh-hero">
+    <div class="gbh-glow gbh-glow-one" aria-hidden="true"></div>
+    <div class="gbh-glow gbh-glow-two" aria-hidden="true"></div>
 
-                <p class="eyebrow">CREATIVE PORTFOLIO</p>
+    <div class="hero-content gbh-intro">
+        <p class="eyebrow">GBH · SOFTWARE ENGINEERING</p>
 
-                <h1>
-                    Ideas que se
-                    <span>convierten</span>
-                    en historias.
-                </h1>
+        <p class="gbh-kicker">PORTAFOLIO ACADÉMICO Y PROFESIONAL</p>
 
-                <p class="hero-description">
-                    Un espacio para descubrir proyectos creativos,
-                    conocer su proceso y explorar nuevas ideas.
-                </p>
+        <h1>
+            Gabriela<br>
+            Benítez<br>
+            <span>Herrera.</span>
+        </h1>
 
-                <div class="hero-buttons">
-                    <a href="#proyectos" class="primary-button">
-                        Explorar proyectos
-                    </a>
+        <p class="hero-description">
+            Ingeniera de software en formación, creando experiencias
+            digitales que combinan tecnología, creatividad y propósito.
+        </p>
 
-                    <a href="#ia" class="secondary-button">
-                        ✦ Conocer LUMÉ AI
-                    </a>
-                </div>
+        <div class="hero-buttons">
+            <a href="#proyectos" class="primary-button">
+                Explorar proyectos <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#sobre-mi" class="secondary-button">
+                Conóceme
+            </a>
+        </div>
 
+        <div class="gbh-signature">
+            <span class="gbh-signature-line"></span>
+            <span>Ideas with purpose. Technology with personality.</span>
+        </div>
+    </div>
+
+    <div class="gbh-portrait-column">
+        <div class="gbh-portrait-frame">
+            <span class="gbh-frame-monogram" aria-hidden="true">GBH</span>
+            <img
+                class="gbh-portrait"
+                src="assets/avatar-gabriela.png"
+                alt="Retrato de Gabriela Benítez Herrera"
+                fetchpriority="high"
+            >
+            <div class="gbh-portrait-caption">
+                <span>GABRIELA BENÍTEZ HERRERA</span>
+                <span>SOFTWARE ENGINEERING PORTFOLIO</span>
             </div>
+        </div>
 
-            <div class="hero-card">
+        <div class="gbh-floating-note">
+            <span class="gbh-note-symbol" aria-hidden="true">✳</span>
+            <span>Creativity meets technology</span>
+        </div>
 
-                <div class="floating-label">
-                    ✦ Featured project
-                </div>
+        <span class="gbh-orbit gbh-orbit-one" aria-hidden="true"></span>
+        <span class="gbh-orbit gbh-orbit-two" aria-hidden="true"></span>
+    </div>
 
-                <div class="artwork">
-                    <div class="circle"></div>
-                    <div class="small-circle"></div>
-
-                    <div class="art-text">
-                        CREATE<br>
-                        YOUR<br>
-                        STORY
-                    </div>
-                </div>
-
-                <div class="project-preview">
-                    <div>
-                        <small>Proyecto destacado</small>
-                        <h3>Visual Poetry</h3>
-                    </div>
-
-                    <span>↗</span>
-                </div>
-
-            </div>
-
-        </section>
+    <a class="gbh-scroll" href="#sobre-mi" aria-label="Desplazarse a la sección Sobre mí">
+        <span>DESCUBRE MI UNIVERSO</span>
+        <span aria-hidden="true">↓</span>
+    </a>
+</section>
 
 
-        <!-- SOBRE MÍ -->
-        <section id="sobre-mi" class="about section">
+
+<!-- =========================
+         ABOUT
+========================== -->
+
+        <section
+            id="sobre-mi"
+            class="about section"
+        >
 
             <div class="section-label">
-                01 / ABOUT
+
+                01 / SOBRE MÍ
+
             </div>
+
+
 
             <div class="about-content">
 
                 <div>
+
                     <h2>
+
                         No solo muestro
+
                         <span>resultados.</span>
+
                     </h2>
+
                 </div>
+
+
 
                 <div class="about-text">
 
                     <p>
-                        LUMÉ es un portafolio pensado para personas
-                        creativas que quieren mostrar mucho más que
-                        una colección de trabajos.
+                        Soy Gabriela Benítez Herrera, estudiante de
+                        Ingeniería de Software interesada en crear
+                        soluciones digitales útiles, accesibles y bien diseñadas.
                     </p>
 
                     <p>
-                        Cada proyecto cuenta su propia historia:
-                        desde la inspiración inicial hasta el resultado
-                        final.
+                        En este espacio reúno mi aprendizaje, mis proyectos
+                        académicos y mi evolución profesional, combinando
+                        pensamiento lógico, creatividad y atención al detalle.
                     </p>
+
+
+
+                    <!-- Pequeño indicador visual -->
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+
+                        <span
+                            class="px-4 py-2 rounded-full bg-white border border-[#ded8d3] text-xs tracking-wide hover:-translate-y-1 transition-transform"
+                        >
+
+                            ✦ Ingeniería de software
+
+                        </span>
+
+                        <span
+                            class="px-4 py-2 rounded-full bg-white border border-[#ded8d3] text-xs tracking-wide hover:-translate-y-1 transition-transform"
+                        >
+
+                            ✦ Resolución de problemas
+
+                        </span>
+
+                        <span
+                            class="px-4 py-2 rounded-full bg-white border border-[#ded8d3] text-xs tracking-wide hover:-translate-y-1 transition-transform"
+                        >
+
+                            ✦ Tecnología
+
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -126,87 +218,291 @@
         </section>
 
 
-        <!-- PROYECTOS -->
-        <section id="proyectos" class="projects section">
+
+<!-- =========================
+         PROJECTS
+========================== -->
+
+        <section
+            id="proyectos"
+            class="projects section"
+        >
 
             <div class="section-heading">
 
                 <div>
+
                     <div class="section-label">
+
                         02 / SELECTED WORK
+
                     </div>
 
                     <h2>
+
                         Proyectos que
+
                         <span>hablan.</span>
+
                     </h2>
+
                 </div>
 
+
+
                 <p>
+
                     Explora algunos proyectos y descubre
+
                     cómo fueron construidos.
+
                 </p>
 
             </div>
 
 
+<!-- =========================
+         FILTROS
+========================== -->
+<!-- BUSCADOR DE PROYECTOS -->
+<div class="mb-5 flex justify-center">
+
+    <div class="relative w-full max-w-md">
+
+        <span
+            class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+        >
+            ⌕
+        </span>
+
+        <input
+            id="projectSearch"
+            type="search"
+            placeholder="Buscar un proyecto..."
+            aria-label="Buscar proyectos"
+            class="w-full rounded-full border border-[#ded8d3] bg-white py-3 pl-11 pr-5 text-sm text-[#1d1b1b] outline-none transition-all duration-300 placeholder:text-gray-400 focus:border-[#c8a8b5] focus:ring-4 focus:ring-[#e8b9c8]/20"
+        >
+
+    </div>
+
+</div>
+            <div class="mb-8 flex flex-wrap justify-center gap-3">
+
+                <button
+                    type="button"
+                    onclick="filterProjects('Todos')"
+                    class="rounded-full border border-[#ded8d3] bg-white px-5 py-2 text-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#f7eef2] hover:shadow-md"
+                >
+
+                    Todos
+
+                </button>
+
+                <button
+                    type="button"
+                    onclick="filterProjects('Aplicación web')"
+                    class="rounded-full border border-[#ded8d3] bg-white px-5 py-2 text-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#f7eef2] hover:shadow-md"
+                >
+                    Aplicación web
+                </button>
+
+                <button
+                    type="button"
+                    onclick="filterProjects('Planificación de eventos')"
+                    class="rounded-full border border-[#ded8d3] bg-white px-5 py-2 text-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#f7eef2] hover:shadow-md"
+                >
+                    Planificación de eventos
+                </button>
+
+                <button
+                    type="button"
+                    onclick="filterProjects('Android / Smartwatch')"
+                    class="rounded-full border border-[#ded8d3] bg-white px-5 py-2 text-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#f7eef2] hover:shadow-md"
+                >
+                    Android / Smartwatch
+                </button>
+
+            </div>
+
+
+
             <div class="project-grid">
 
-                <article class="project-card">
+
+<!-- PROJECT 01 -->
+
+                <article
+                    class="project-card group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                >
+
+                    <!-- Categoría para el filtro -->
+
+                    <span class="hidden">Aplicación web</span>
 
                     <div class="project-image project-one">
-                        <span>01</span>
+
+                        <span
+                            class="transition-transform duration-300 group-hover:scale-110"
+                        >
+
+                            01
+
+                        </span>
+
                     </div>
 
+
+
                     <div class="project-info">
+
                         <div>
-                            <small>BRANDING · 2026</small>
-                            <h3>Maison Nova</h3>
+
+                            <small>
+
+                                APLICACIÓN WEB · 2026
+
+                            </small>
+
+                            <h3>
+
+                                MOODÉ
+
+                            </h3>
+
                         </div>
 
-                        <button onclick="showProject('Maison Nova')">
+
+
+                        <button
+                            onclick="showProject('MOODÉ')"
+                            aria-label="Ver proyecto MOODÉ"
+                            class="transition-all duration-300 hover:rotate-12"
+                        >
+
                             ↗
+
                         </button>
+
                     </div>
 
                 </article>
 
 
-                <article class="project-card">
+
+<!-- PROJECT 02 -->
+
+                <article
+                    class="project-card group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                >
+
+                    <!-- Categoría para el filtro -->
+
+                    <span class="hidden">Planificación de eventos</span>
 
                     <div class="project-image project-two">
-                        <span>02</span>
+
+                        <span
+                            class="transition-transform duration-300 group-hover:scale-110"
+                        >
+
+                            02
+
+                        </span>
+
                     </div>
 
+
+
                     <div class="project-info">
+
                         <div>
-                            <small>PHOTOGRAPHY · 2026</small>
-                            <h3>Soft Memories</h3>
+
+                            <small>
+
+                                PLANIFICACIÓN DE EVENTOS · 2026
+
+                            </small>
+
+                            <h3>
+
+                                MIRAGE
+
+                            </h3>
+
                         </div>
 
-                        <button onclick="showProject('Soft Memories')">
+
+
+                        <button
+                            onclick="showProject('MIRAGE')"
+                            aria-label="Ver proyecto MIRAGE"
+                            class="transition-all duration-300 hover:rotate-12"
+                        >
+
                             ↗
+
                         </button>
+
                     </div>
 
                 </article>
 
 
-                <article class="project-card">
+
+<!-- PROJECT 03 -->
+
+                <article
+                    class="project-card group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                >
+
+                    <!-- Categoría para el filtro -->
+
+                    <span class="hidden">Android / Smartwatch</span>
 
                     <div class="project-image project-three">
-                        <span>03</span>
+
+                        <span
+                            class="transition-transform duration-300 group-hover:scale-110"
+                        >
+
+                            03
+
+                        </span>
+
                     </div>
 
+
+
                     <div class="project-info">
+
                         <div>
-                            <small>DIGITAL ART · 2026</small>
-                            <h3>After Light</h3>
+
+                            <small>
+
+                                ANDROID / SMARTWATCH · 2026
+
+                            </small>
+
+                            <h3>
+
+                                CHARM
+
+                            </h3>
+
                         </div>
 
-                        <button onclick="showProject('After Light')">
+
+
+                        <button
+                            onclick="showProject('CHARM')"
+                            aria-label="Ver proyecto CHARM"
+                            class="transition-all duration-300 hover:rotate-12"
+                        >
+
                             ↗
+
                         </button>
+
                     </div>
 
                 </article>
@@ -216,27 +512,69 @@
         </section>
 
 
-        <!-- IA -->
-        <section id="ia" class="ai-section">
 
-            <div class="ai-content">
+<!-- =========================
+         AI SECTION
+========================== -->
 
-                <div class="ai-icon">
+        <section
+            id="ia"
+            class="ai-section relative overflow-hidden"
+        >
+
+            <!-- Decorative background -->
+
+            <div
+                class="absolute top-10 left-10 w-40 h-40 rounded-full bg-[#e8b9c8]/10 blur-3xl pointer-events-none"
+            ></div>
+
+            <div
+                class="absolute bottom-10 right-10 w-56 h-56 rounded-full bg-purple-300/10 blur-3xl pointer-events-none"
+            ></div>
+
+
+
+            <div class="ai-content relative z-10">
+
+                <div
+                    class="ai-icon transition-transform duration-500 hover:rotate-180"
+                >
+
                     ✦
+
                 </div>
 
-                <p class="eyebrow">LUMÉ AI</p>
+                <p class="eyebrow">
+
+                    GBH Project Studio
+
+                </p>
+
+
 
                 <h2>
+
                     Tu trabajo.
+
                     <span>Una nueva perspectiva.</span>
+
                 </h2>
 
+
+
                 <p>
-                    LUMÉ AI analiza la información de tus proyectos
+
+                    GBH Project Studio analiza la información de tus proyectos
+
                     y genera recomendaciones para organizar,
+
                     describir y presentar mejor tu portafolio.
+
                 </p>
+
+
+
+<!-- AI TOOL -->
 
                 <div class="ai-demo">
 
@@ -246,19 +584,42 @@
                             type="text"
                             id="projectInput"
                             placeholder="Escribe el nombre de tu proyecto..."
+                            aria-label="Nombre del proyecto"
                         >
 
-                        <button onclick="generateRecommendation()">
-                            Analizar proyecto
+
+
+                        <button
+                            onclick="generateRecommendation()"
+                            class="hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+                        >
+
+                            ✦ Analizar proyecto
+
                         </button>
 
                     </div>
 
-                    <div id="aiResult" class="ai-result">
-                        <span>✦</span>
+
+
+                    <div
+                        id="aiResult"
+                        class="ai-result transition-all duration-300"
+                        aria-live="polite"
+                    >
+
+                        <span>
+
+                            ✦
+
+                        </span>
+
                         <p>
-                            La recomendación de LUMÉ AI aparecerá aquí.
+
+                            La recomendación de GBH Project Studio aparecerá aquí.
+
                         </p>
+
                     </div>
 
                 </div>
@@ -268,26 +629,146 @@
         </section>
 
 
-        <!-- FOOTER -->
-        <footer>
 
-            <div class="footer-logo">
-                LUMÉ<span>.</span>
+<!-- =========================
+         FOOTER
+========================== -->
+
+        <footer id="contacto">
+    <div class="footer-brand">
+        <div class="footer-logo">GBH<span>.</span></div>
+        <p>Ingeniería de Software · Ideas con propósito.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Enlaces profesionales">
+        <a href="mailto:Gabrielabenitez658@gmail.com">Correo electrónico</a>
+        <a href="https://github.com/Gabriela50" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriela-benitez-737ab6396/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+
+    <p class="footer-copyright">© 2026 Gabriela Benítez Herrera</p>
+</footer>
+<!-- =========================
+     MODAL DE PROYECTO
+========================== -->
+
+<div
+    id="projectModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 px-5 backdrop-blur-sm"
+    aria-hidden="true"
+>
+
+    <div
+        id="projectModalContent"
+        class="relative w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalProjectTitle"
+    >
+
+        <!-- BOTÓN CERRAR -->
+
+        <button
+            type="button"
+            onclick="closeProjectModal()"
+            class="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl text-gray-700 shadow-md transition-all duration-300 hover:rotate-90 hover:bg-[#1d1b1b] hover:text-white"
+            aria-label="Cerrar proyecto"
+        >
+            ×
+        </button>
+
+
+        <!-- PREVIEW -->
+
+        <div
+            id="modalProjectPreview"
+            class="flex h-52 items-center justify-center bg-gradient-to-br from-[#e8b9c8] via-[#e8ddec] to-[#c7d7ed]"
+        >
+
+            <span
+                id="modalProjectNumber"
+                class="flex h-20 w-20 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-[#1d1b1b] shadow-lg"
+            >
+                01
+            </span>
+
+        </div>
+
+
+        <!-- INFORMACIÓN -->
+
+        <div class="p-7 md:p-9">
+
+            <p
+                id="modalProjectCategory"
+                class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#9a687c]"
+            >
+                Branding
+            </p>
+
+            <h2
+                id="modalProjectTitle"
+                class="mb-4 text-3xl font-semibold tracking-tight text-[#1d1b1b]"
+            >
+                MOODÉ
+            </h2>
+
+            <p
+                id="modalProjectDescription"
+                class="mb-6 leading-7 text-gray-600"
+            >
+                Descripción del proyecto.
+            </p>
+
+
+            <!-- TAGS -->
+
+            <div
+                id="modalProjectTags"
+                class="mb-7 flex flex-wrap gap-2"
+            >
             </div>
 
-            <p>
-                Creative portfolio · Designed with intention.
-            </p>
 
-            <p>
-                © 2026 LUMÉ
-            </p>
+            <!-- FOOTER MODAL -->
 
-        </footer>
+            <div class="flex items-center justify-between border-t border-[#eee8e5] pt-5">
 
+                <span class="text-xs font-medium uppercase tracking-wider text-gray-400">
+                    GBH · Selected work
+                </span>
+
+                <button
+                    type="button"
+                    onclick="closeProjectModal()"
+                    class="rounded-full bg-[#1d1b1b] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                >
+                    Cerrar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
     </main>
+
+
+
+<!-- JAVASCRIPT -->
+
+    <script src="data/projects.js"></script>
+
+    <script src="src/ai.js"></script>
+
+    <script src="src/js/projects.js"></script>
+
+    <script src="src/js/filters.js"></script>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

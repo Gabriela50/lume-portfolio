@@ -1,0 +1,166 @@
+/* ==========================================
+   GBH — ESTILOS DE PROYECTOS
+   ========================================== */
+
+   .project-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(217, 70, 239, 0.08),
+            transparent 45%,
+            rgba(59, 130, 246, 0.06)
+        );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(232, 121, 249, 0.35);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   IMAGEN / ÁREA VISUAL
+   ========================================== */
+
+.project-preview {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 50%,
+            rgba(2, 6, 23, 0.35)
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   ICONO DEL PROYECTO
+   ========================================== */
+
+.project-icon {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.08) rotate(3deg);
+}
+
+
+/* ==========================================
+   INFORMACIÓN
+   ========================================== */
+
+.project-category {
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.project-title {
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+    color: rgb(240, 171, 252);
+}
+
+
+/* ==========================================
+   BOTÓN
+   ========================================== */
+
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+}
+
+.project-button:hover {
+    gap: 0.65rem;
+}
+
+
+/* ==========================================
+   ANIMACIÓN DE ENTRADA
+   ========================================== */
+
+.project-card {
+    animation: projectAppear 0.6s ease both;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes projectAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   REDUCIR ANIMACIONES SI EL USUARIO LO PREFIERE
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-card,
+    .project-icon,
+    .project-button {
+        animation: none;
+        transition: none;
+    }
+
+}

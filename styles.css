@@ -650,3 +650,851 @@ footer p {
         text-align: center;
     }
 }
+
+/* =====================================================
+   LUMÉ — SECCIÓN DE PROYECTOS PROFESIONAL
+   ===================================================== */
+
+/* Contenedor general de proyectos */
+
+#proyectos {
+    position: relative;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+#proyectos .section-heading {
+    margin-bottom: 0;
+}
+
+#proyectos .section-heading h2 {
+    line-height: 1.05;
+}
+
+#proyectos .section-heading > p {
+    max-width: 430px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FILTROS
+   ===================================================== */
+
+#proyectos .mb-8 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 34px;
+    margin-bottom: 46px;
+}
+
+
+/* Botones */
+
+#proyectos .mb-8 button {
+    appearance: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100px;
+    min-height: 42px;
+
+    padding: 10px 22px;
+
+    border: 1px solid #ded8d3;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #55505a;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.01em;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(35, 28, 31, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+#proyectos .mb-8 button:hover {
+    transform: translateY(-3px);
+
+    background: #fff;
+
+    color: #1d1b1b;
+
+    border-color: #cbbbc2;
+
+    box-shadow:
+        0 8px 22px rgba(35, 28, 31, 0.09);
+}
+
+
+/* Botón seleccionado */
+
+#proyectos .mb-8 button.bg-\[\#1d1b1b\] {
+    background: #1d1b1b !important;
+
+    color: #ffffff !important;
+
+    border-color: #1d1b1b !important;
+
+    box-shadow:
+        0 8px 20px rgba(29, 27, 27, 0.18);
+}
+
+
+/* =====================================================
+   GRID DE PROYECTOS
+   ===================================================== */
+
+#proyectos .project-grid {
+    gap: 28px;
+}
+
+
+/* =====================================================
+   TARJETA
+   ===================================================== */
+
+#proyectos .project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(222, 216, 211, 0.9);
+
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(35, 28, 31, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Línea decorativa superior */
+
+#proyectos .project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e8b9c8,
+            #d8c9e8,
+            #c7d7ed
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 3;
+}
+
+
+/* Hover de tarjeta */
+
+#proyectos .project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(203, 187, 194, 0.8);
+
+    box-shadow:
+        0 22px 50px rgba(35, 28, 31, 0.13);
+}
+
+#proyectos .project-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   IMAGEN / PREVIEW
+   ===================================================== */
+
+#proyectos .project-image {
+    position: relative;
+
+    min-height: 250px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-start;
+
+    padding: 24px;
+
+    isolation: isolate;
+}
+
+
+/* Efecto de iluminación */
+
+#proyectos .project-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(20, 17, 19, 0.32)
+        );
+
+    z-index: -1;
+}
+
+
+/* Número */
+
+#proyectos .project-image > span {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    color: #2b2729;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+#proyectos .project-card:hover
+.project-image > span {
+    transform: scale(1.08);
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+#proyectos .project-info {
+    min-height: 108px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 24px;
+}
+
+
+/* Categoría */
+
+#proyectos .project-info small {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #938b91;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+}
+
+
+/* Nombre */
+
+#proyectos .project-info h3 {
+    margin: 0;
+
+    color: #1d1b1b;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+    transition: color 0.25s ease;
+}
+
+
+#proyectos .project-card:hover
+.project-info h3 {
+    color: #9a687c;
+}
+
+
+/* =====================================================
+   BOTÓN VER PROYECTO
+   ===================================================== */
+
+#proyectos .project-info button {
+    flex-shrink: 0;
+
+    width: 46px;
+    height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #ded8d3;
+
+    border-radius: 50%;
+
+    background: #faf8f7;
+
+    color: #292527;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#proyectos .project-info button:hover {
+    transform: translate(2px, -2px);
+
+    background: #1d1b1b;
+
+    color: #ffffff;
+
+    border-color: #1d1b1b;
+
+    box-shadow:
+        0 8px 18px rgba(29, 27, 27, 0.18);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    #proyectos .mb-8 {
+        margin-top: 28px;
+
+        margin-bottom: 34px;
+
+        gap: 8px;
+    }
+
+
+    #proyectos .mb-8 button {
+        min-width: auto;
+
+        padding: 9px 16px;
+
+        font-size: 12px;
+    }
+
+
+    #proyectos .project-image {
+        min-height: 220px;
+    }
+
+
+    #proyectos .project-info {
+        min-height: auto;
+
+        padding: 19px;
+    }
+
+
+    #proyectos .project-info h3 {
+        font-size: 18px;
+    }
+
+
+    #proyectos .project-info button {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #proyectos .project-card,
+    #proyectos .project-info button,
+    #proyectos .mb-8 button,
+    #proyectos .project-image > span {
+
+        transition: none;
+
+    }
+
+}
+
+/* ===== GBH PERSONAL BRAND ===== */
+:root {
+    --gbh-rose: #bd8299;
+    --gbh-mauve: #87566c;
+    --gbh-ivory: #faf7f4;
+    --gbh-plum: #392633;
+}
+
+body {
+    background: var(--gbh-ivory);
+}
+
+.gbh-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: min(850px, calc(100vh - 82px));
+    padding: 76px 8% 100px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(300px, .82fr);
+    gap: clamp(42px, 7vw, 100px);
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 78% 42%, rgba(222, 190, 203, .24), transparent 48%),
+        var(--gbh-ivory);
+}
+
+.gbh-intro {
+    position: relative;
+    z-index: 2;
+}
+
+.gbh-hero .eyebrow {
+    margin-bottom: 14px;
+    color: var(--gbh-mauve);
+    letter-spacing: 3px;
+}
+
+.gbh-kicker {
+    margin-bottom: 20px;
+    color: #8b7b82;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+}
+
+.gbh-hero h1 {
+    color: var(--gbh-plum);
+    font-size: clamp(54px, 6.5vw, 91px);
+    line-height: .99;
+    letter-spacing: -3.8px;
+}
+
+.gbh-hero h1 span {
+    color: var(--gbh-rose);
+}
+
+.gbh-hero .hero-description {
+    max-width: 460px;
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.gbh-hero .hero-buttons {
+    margin-top: 30px;
+}
+
+.gbh-hero .primary-button {
+    background: var(--gbh-plum);
+    border: 1px solid var(--gbh-plum);
+}
+
+.gbh-hero .primary-button:hover {
+    background: var(--gbh-mauve);
+    border-color: var(--gbh-mauve);
+}
+
+.gbh-hero .secondary-button {
+    border-color: #d9cbd1;
+    background: transparent;
+}
+
+.gbh-hero .secondary-button:hover {
+    border-color: var(--gbh-rose);
+    color: var(--gbh-mauve);
+}
+
+.gbh-signature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 38px;
+    color: #8b7b82;
+    font-size: 10px;
+    letter-spacing: .35px;
+}
+
+.gbh-signature-line {
+    width: 34px;
+    height: 1px;
+    flex: 0 0 auto;
+    background: var(--gbh-rose);
+}
+
+.gbh-portrait-column {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 405px;
+    justify-self: center;
+    padding: 12px 10px 24px;
+}
+
+.gbh-portrait-frame {
+    position: relative;
+    padding: 10px;
+    border: 1px solid rgba(135, 86, 108, .3);
+    border-radius: 220px 220px 18px 18px;
+    background: rgba(255, 255, 255, .52);
+    box-shadow: 0 24px 65px rgba(73, 43, 58, .09);
+}
+
+.gbh-portrait {
+    display: block;
+    width: 100%;
+    height: clamp(370px, 43vw, 535px);
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 210px 210px 12px 12px;
+    background: #ead9df;
+}
+
+.gbh-frame-monogram {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: -18px;
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border: 1px solid rgba(135, 86, 108, .25);
+    border-radius: 50%;
+    background: var(--gbh-ivory);
+    color: var(--gbh-mauve);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    letter-spacing: -1px;
+}
+
+.gbh-portrait-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px 8px 8px;
+    text-align: center;
+}
+
+.gbh-portrait-caption span:first-child {
+    color: var(--gbh-plum);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.gbh-portrait-caption span:last-child {
+    color: #98868e;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+.gbh-floating-note {
+    position: absolute;
+    right: -15px;
+    bottom: 75px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    border: 1px solid rgba(135, 86, 108, .12);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 12px 32px rgba(73, 43, 58, .09);
+    color: var(--gbh-plum);
+    font-size: 10px;
+}
+
+.gbh-note-symbol {
+    color: var(--gbh-rose);
+    font-size: 20px;
+}
+
+.gbh-glow {
+    position: absolute;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    filter: blur(75px);
+    pointer-events: none;
+}
+
+.gbh-glow-one {
+    top: 8%;
+    left: -180px;
+    background: rgba(215, 166, 186, .22);
+}
+
+.gbh-glow-two {
+    right: -180px;
+    bottom: 5%;
+    background: rgba(191, 169, 210, .2);
+}
+
+.gbh-orbit {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(189, 130, 153, .2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.gbh-orbit-one {
+    top: 0;
+    right: -38px;
+    width: 150px;
+    height: 150px;
+}
+
+.gbh-orbit-two {
+    right: -65px;
+    bottom: 25px;
+    width: 100px;
+    height: 100px;
+}
+
+.gbh-scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 8%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #8b7b82;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    text-decoration: none;
+}
+
+.gbh-scroll span:last-child {
+    color: var(--gbh-mauve);
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .gbh-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(250px, .8fr);
+        gap: 35px;
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .gbh-hero h1 {
+        font-size: clamp(49px, 7vw, 70px);
+        letter-spacing: -2.8px;
+    }
+
+    .gbh-portrait {
+        height: 410px;
+    }
+
+    .gbh-floating-note {
+        right: -6px;
+    }
+}
+
+@media (max-width: 650px) {
+    .gbh-hero {
+        min-height: auto;
+        padding: 62px 6% 86px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+    }
+
+    .gbh-hero h1 {
+        font-size: clamp(54px, 14vw, 76px);
+        letter-spacing: -2.7px;
+    }
+
+    .gbh-hero .hero-description {
+        font-size: 14px;
+    }
+
+    .gbh-signature {
+        margin-top: 27px;
+        font-size: 9px;
+    }
+
+    .gbh-portrait-column {
+        width: min(100%, 360px);
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .gbh-portrait {
+        height: min(112vw, 465px);
+    }
+
+    .gbh-floating-note {
+        right: -4px;
+        bottom: 65px;
+        padding: 10px 12px;
+        font-size: 9px;
+    }
+
+    .gbh-scroll {
+        bottom: 24px;
+        left: 6%;
+        font-size: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gbh-hero *,
+    .gbh-hero *::before,
+    .gbh-hero *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ==========================================
+   GBH — CONTACTO PROFESIONAL
+========================================== */
+
+footer {
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 20px;
+}
+
+.footer-links a {
+    color: var(--dark);
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--pink-dark);
+}
+
+.footer-links a:focus-visible {
+    outline: 2px solid var(--pink-dark);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+@media (max-width: 650px) {
+    .footer-brand {
+        align-items: center;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
