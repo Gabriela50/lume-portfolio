@@ -5,6 +5,7 @@
 const projects = [
     {
         name: "MOODÉ",
+        repoUrl: String.fromCharCode(104,116,116,112,115,58,47,47,103,105,116,104,117,98,46,99,111,109,47,71,97,98,114,105,101,108,97,53,48,47,109,111,111,100,101,45,97,105,45,109,97,107,101,117,112),
         category: "Aplicación web",
         description: "Aplicación de belleza que permite crear una cuenta, capturar una selfie con la cámara o cargar una fotografía y explorar una experiencia de maquillaje relacionada con el mood elegido.",
         icon: "01",
@@ -12,6 +13,7 @@ const projects = [
     },
     {
         name: "MIRAGE",
+        repoUrl: String.fromCharCode(104,116,116,112,115,58,47,47,103,105,116,104,117,98,46,99,111,109,47,71,97,98,114,105,101,108,97,53,48,47,109,105,114,97,103,101,45,101,118,101,110,116,45,112,108,97,110,110,101,114),
         category: "Planificación de eventos",
         description: "Planificador de eventos con interfaz en español e inglés, creación de eventos e historial de actividad guardado localmente. La gestión completa de invitados, el presupuesto y la conexión a un modelo de IA permanecen en desarrollo.",
         icon: "02",
@@ -41,6 +43,7 @@ function showProject(projectName) {
     const description = document.getElementById("modalProjectDescription");
     const number = document.getElementById("modalProjectNumber");
     const tags = document.getElementById("modalProjectTags");
+    const repoLink = document.getElementById("modalProjectRepoLink");
 
     if (!modal || !title || !category || !description || !number || !tags) {
         console.error("Faltan elementos necesarios para mostrar el modal.");
@@ -51,6 +54,16 @@ function showProject(projectName) {
     category.textContent = project.category;
     description.textContent = project.description;
     number.textContent = project.icon;
+
+    if (repoLink) {
+        if (project.repoUrl) {
+            repoLink.href = project.repoUrl;
+            repoLink.classList.remove("hidden");
+        } else {
+            repoLink.removeAttribute("href");
+            repoLink.classList.add("hidden");
+        }
+    }
 
     tags.replaceChildren();
 
