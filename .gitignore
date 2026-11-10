@@ -8,3 +8,7 @@ styles-backup.css
 index.html.pre-about.bak
 .next/
 out/
+
+# Instaladores: se publican como activos de GitHub Releases
+public/downloads/*.apk
+public/downloads/*.dmg
