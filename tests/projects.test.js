@@ -1,56 +1,30 @@
 const fs = require("fs");
-const vm = require("vm");
 const assert = require("assert");
 
-const source = fs.readFileSync("data/projects.js", "utf8");
-const context = {
-    console,
-    document: {
-        addEventListener() {},
-        getElementById() {
-            return null;
-        }
-    }
-};
+const page = fs.readFileSync("app/page.tsx", "utf8");
+const css = fs.readFileSync("app/globals.css", "utf8");
 
-vm.createContext(context);
-vm.runInContext(source + "\nthis.projectsForTest = projects;", context);
-
-const projects = context.projectsForTest;
-const expected = [
-    {
-        name: "MOODÉ",
-        repo: "https://github.com/Gabriela50/moode-ai-makeup"
-    },
-    {
-        name: "MIRAGE",
-        repo: "https://github.com/Gabriela50/mirage-event-planner"
-    },
-    {
-        name: "CHARM",
-        repo: null
-    }
-];
-
-assert.strictEqual(projects.length, 3, "Debe haber tres proyectos.");
-
-for (const item of expected) {
-    const project = projects.find(p => p.name === item.name);
-    assert.ok(project, `Falta el proyecto ${item.name}.`);
-    assert.ok(project.category, `${item.name} necesita una categoría.`);
-    assert.ok(project.description, `${item.name} necesita una descripción.`);
-    assert.ok(Array.isArray(project.tags) && project.tags.length > 0,
-        `${item.name} necesita etiquetas.`);
-
-    if (item.repo) {
-        assert.strictEqual(project.repoUrl, item.repo,
-            `El enlace de ${item.name} no coincide.`);
-    } else {
-        assert.ok(!project.repoUrl,
-            "CHARM no debe mostrar un enlace que no está configurado.");
-    }
-
-    console.log(`OK: ${project.name}`);
+const expectedProjects = ["MOODÉ", "MIRAGE", "CHARM", "MARBLE OVERDRIVE"];
+for (const name of expectedProjects) {
+  assert.ok(page.includes(name), `Falta el proyecto ${name}.`);
+  console.log(`OK: ${name}`);
 }
 
-console.log("Todas las pruebas de proyectos pasaron.");
+const requiredSections = ["perfil", "habilidades", "experiencia", "formacion", "proyectos", "contacto", "referencias"];
+for (const section of requiredSections) {
+  assert.ok(page.includes(`id="${section}"`), `Falta la sección ${section}.`);
+  console.log(`OK: sección ${section}`);
+}
+
+assert.ok(page.includes("/projects/moode-mobile.png"), "MOODÉ debe mostrar la nueva imagen móvil.");
+assert.ok(page.includes("PROYECTO COLABORATIVO"), "Marble Overdrive debe identificarse como colaborativo.");
+assert.ok(page.includes("13 escenarios seleccionables"), "La descripción de Marble debe reflejar sus escenarios.");
+assert.ok(page.includes("recommendation") || page.includes("recomendaciones"), "MIRAGE debe describir sus recomendaciones.");
+assert.ok(page.includes("Simulador interactivo de una experiencia para smartwatch"), "CHARM debe describirse como simulador interactivo.");
+assert.ok(page.includes("github.com/danilolarap/MarbleOverdrive"), "Falta el repositorio colaborativo.");
+assert.ok(css.includes("@media (max-width: 480px)"), "Falta adaptación para móviles pequeños.");
+assert.ok(css.includes("prefers-reduced-motion"), "Falta respetar la preferencia de movimiento reducido.");
+
+console.log("Todas las pruebas del portafolio GBH pasaron.");
+
+assert.ok(page.includes("https://github.com/Gabriela50"), "Falta el enlace público de GitHub.");
