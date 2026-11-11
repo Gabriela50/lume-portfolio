@@ -5,7 +5,6 @@ const projects = [
   {
     number: "01",
     name: "MOODÉ",
-    open: "http://localhost:5175/index-react.html",
     category: "APLICACIÓN MÓVIL · BELLEZA DIGITAL",
     description: "Una aplicación móvil que conecta preferencias personales y tecnología para explorar recomendaciones de maquillaje. Permite trabajar con fotografías, elegir un mood y conservar looks favoritos.",
     image: "/projects/moode-mobile.png",
@@ -21,7 +20,6 @@ const projects = [
   {
     number: "02",
     name: "MIRAGE",
-    open: "http://localhost:5173",
     category: "PLANIFICACIÓN DE EVENTOS · ESCRITORIO",
     description: "Una herramienta para organizar eventos desde un mismo espacio. Reúne información del evento, invitados, presupuestos e historial, e incorpora un asistente que propone recomendaciones a partir de los datos proporcionados.",
     image: "/projects/mirage-team.png",
@@ -292,7 +290,6 @@ export default function HomePage() {
                 <div className="projectTags">{project.technologies.map(tag => <span key={tag}>{tag}</span>)}</div>
                 {project.note && <p className="projectNote">{project.note}</p>}
                 <div className="projectActions">
-                  {project.open && <a href={project.open} target="_blank" rel="noreferrer">Abrir aplicación <span>↗</span></a>}
                   {project.repo && <a href={project.repo} target="_blank" rel="noreferrer">Ver repositorio <span>↗</span></a>}
                   {project.download && <a href={project.download} download>{project.downloadLabel} <span>↓</span></a>}
                 </div>
