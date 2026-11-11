@@ -5,6 +5,8 @@ const projects = [
   {
     number: "01",
     name: "MOODÉ",
+    open: "https://moode-ai-makeup-pw71.vercel.app/",
+    openLabel: "Abrir aplicación",
     category: "APLICACIÓN MÓVIL · BELLEZA DIGITAL",
     description: "Una aplicación móvil que conecta preferencias personales y tecnología para explorar recomendaciones de maquillaje. Permite trabajar con fotografías, elegir un mood y conservar looks favoritos.",
     image: "/projects/moode-mobile.png",
@@ -20,6 +22,8 @@ const projects = [
   {
     number: "02",
     name: "MIRAGE",
+    open: "http://localhost:5173/",
+    openLabel: "Abrir en este Mac",
     category: "PLANIFICACIÓN DE EVENTOS · ESCRITORIO",
     description: "Una herramienta para organizar eventos desde un mismo espacio. Reúne información del evento, invitados, presupuestos e historial, e incorpora un asistente que propone recomendaciones a partir de los datos proporcionados.",
     image: "/projects/mirage-team.png",
@@ -36,6 +40,8 @@ const projects = [
   {
     number: "03",
     name: "CHARM",
+    open: "/charm",
+    openLabel: "Abrir simulador",
     category: "SIMULADOR INTERACTIVO · SMARTWATCH",
     description: "Simulador interactivo de una experiencia para smartwatch. Permite explorar una entrada digital, consultar una agenda y probar la interfaz de CHARM IA desde el computador.",
     visual: "charm",
@@ -291,6 +297,7 @@ export default function HomePage() {
                 {project.note && <p className="projectNote">{project.note}</p>}
                 <div className="projectActions">
                   {project.repo && <a href={project.repo} target="_blank" rel="noreferrer">Ver repositorio <span>↗</span></a>}
+                  {project.open && <a href={project.open} target="_blank" rel="noreferrer">{project.openLabel} <span>↗</span></a>}
                   {project.download && <a href={project.download} download>{project.downloadLabel} <span>↓</span></a>}
                 </div>
               </div>
