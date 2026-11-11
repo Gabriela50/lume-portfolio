@@ -142,7 +142,7 @@ export default function HomePage() {
           <div className="heroActions">
             <a className="buttonPrimary" href="#proyectos">Explorar proyectos <span>↗</span></a>
             <a className="textLink" href="#perfil">Conocer mi perfil ↓</a>
-            <a className="textLink" href="/downloads/GBH-Portafolio.pdf" download="GBH-Portafolio.pdf">Descargar portafolio PDF ↓</a>
+            <a className="textLink" href="/downloads/CV_Gabriela_Benitez_Herrera.pdf" download="CV_Gabriela_Benitez_Herrera.pdf">Descargar hoja de vida ↓</a>
           </div>
           <div className="heroFacts">
             <div><strong>04</strong><span>PROYECTOS PRESENTADOS</span></div>
