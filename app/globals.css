@@ -315,3 +315,66 @@ html[data-theme="dark"] .educationTimeline article::before { box-shadow: 0 0 0 5
 .referencesGrid p { min-height:65px; color:var(--muted); font-size:.75rem; line-height:1.7; }
 .referencesGrid small { color:var(--wine); font-size:.62rem; }
 @media(max-width:760px) { .referencesGrid { grid-template-columns:1fr; } .referencesGrid p { min-height:0; } }
+
+/* CHARM: esfera circular de smartwatch */
+.charmSimWorkspace {
+  grid-template-columns: 155px minmax(0, 1fr);
+  align-items: center;
+}
+
+.charmSimMain {
+  width: min(100%, 390px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  min-height: 0;
+  justify-self: center;
+  align-self: center;
+  border: 9px solid #51445e;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #373044, #171923 85%);
+  box-shadow: 0 0 0 3px #bba6cc, 0 20px 40px #0006, inset 0 0 25px #0006;
+  overflow: hidden;
+}
+
+.charmSimMain .charmSimTop,
+.charmSimMain .charmSimFooter {
+  display: none;
+}
+
+.charmSimMain .charmSimContent {
+  width: 78%;
+  max-height: 76%;
+  margin: auto;
+  padding: 8px 3px;
+  overflow-y: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.charmSimMain .charmSimContent h3 {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+}
+
+.charmSimMain .charmSimEvent {
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.charmSimMain .charmSimQR {
+  width: 100px;
+  height: 100px;
+  gap: 1px;
+}
+
+.charmSimMain .charmSimAssistant form {
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .charmSimWorkspace {
+    grid-template-columns: 1fr;
+  }
+  .charmSimMain {
+    width: min(100%, 350px);
+  }
+}
