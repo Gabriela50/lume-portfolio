@@ -142,6 +142,7 @@ export default function HomePage() {
           <div className="heroActions">
             <a className="buttonPrimary" href="#proyectos">Explorar proyectos <span>↗</span></a>
             <a className="textLink" href="#perfil">Conocer mi perfil ↓</a>
+            <a className="textLink" href="/downloads/GBH-Portafolio.pdf" download="GBH-Portafolio.pdf">Descargar portafolio PDF ↓</a>
           </div>
           <div className="heroFacts">
             <div><strong>04</strong><span>PROYECTOS PRESENTADOS</span></div>
